@@ -15,10 +15,13 @@ function App() {
     let tempAnswer = 0;
     let newString = string.toLowerCase();
     newString = newString.replace(/\s+/g, "");
+    setAnswer("There are no vowels");
     for (let i = 0; i < newString.length; i++) {
       if (vowels.includes(newString[i])) {
         tempAnswer++;
-        setAnswer("There are " + tempAnswer + " vowels");
+        if (tempAnswer === 1) {
+          setAnswer("There is " + tempAnswer + " vowel");
+        } else setAnswer("There are " + tempAnswer + " vowels");
       }
     }
   }
