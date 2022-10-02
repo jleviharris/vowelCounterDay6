@@ -33,17 +33,19 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Vowel Counter</h1>
-      <form onSubmit={handleSubmit}>
-        {" "}
-        <input
-          type="text"
-          value={string}
-          onChange={(e) => setString(e.target.value)}
-        ></input>
-        <button className="bttn">Check</button>
-      </form>
-      <div className="answer">{answer}</div>
+      <div className="container">
+        <h1>Vowel Counter</h1>
+        <form onSubmit={handleSubmit}>
+          {" "}
+          <input
+            type="text"
+            value={string}
+            onChange={(e) => setString(e.target.value)}
+          ></input>
+          <button className="bttn">Check</button>
+        </form>
+        <div className="answer">{answer}</div>
+      </div>
     </div>
   );
 }
